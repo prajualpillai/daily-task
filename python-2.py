@@ -4,6 +4,9 @@ def even(start,n):
 
     for i in range(n):
         print(start+2*i, end = " ")
+try:
 
-m = list(map(int,input().rstrip().split()))
-even(m[0],m[1])
+    m = list(map(int,input().rstrip().split()))
+    even(m[0],m[1])
+except:
+    print("Invalid input")
