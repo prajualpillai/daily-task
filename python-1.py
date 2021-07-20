@@ -21,3 +21,4 @@ if 1<= n <=1000:
         
 else:
     print("Invalid Input")
+    print("test")
