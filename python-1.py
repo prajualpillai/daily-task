@@ -9,16 +9,17 @@ def multiply(a,b,bound):
         print("Invalid Input")
 
 
-
-n = int(input())
-a = []
-if 1<= n <=1000: 
-    for i in range(n):
-        q = list(map(int,input().rstrip().split()))
-        a.append(q)
-    for q in a:
-        multiply(q[0],q[1],q[2])
-        
-else:
+try:
+    n = int(input())
+    a = []
+    if 1<= n <=1000: 
+        for i in range(n):
+            q = list(map(int,input().rstrip().split()))
+            a.append(q)
+        for q in a:
+            multiply(q[0],q[1],q[2])
+            
+    else:
+        print("Invalid Input")
+except ValueError:
     print("Invalid Input")
-    print("test")
