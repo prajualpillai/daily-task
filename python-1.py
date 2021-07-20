@@ -1,3 +1,15 @@
+def multiply(a,b,bound):
+    try:
+        s = a*b
+        if s <= bound:
+            print(s)
+        else:
+            print("multiplication of {} and {} with bound {} not possible".format(a,b,bound))
+    except ValueError:
+        print("Invalid Input")
+
+
+
 n = int(input())
 a = []
 if 1<= n <=1000: 
@@ -5,13 +17,7 @@ if 1<= n <=1000:
         q = list(map(int,input().rstrip().split()))
         a.append(q)
     for q in a:
-        try:
-            s = q[0]*q[1]
-            if s <= q[2]:
-                print(s)
-            else:
-                print("multiplication of {} and {} with bound {} not possible".format(q[0],q[1],s))
-        except ValueError:
-            print("Invalid Input")
+        multiply(q[0],q[1],q[2])
+        
 else:
     print("Invalid Input")
